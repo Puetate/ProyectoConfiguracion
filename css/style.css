@@ -44,7 +44,7 @@ section{
   max-width: 80px;
 }
 #hero{
-  background: url('images/hero.jpg') no-repeat;
+  background: url('../assets/images/hero.jpg') no-repeat;
   background-color: rgb(100,100,100);
   background-blend-mode: soft-light;
   background-size: cover;
