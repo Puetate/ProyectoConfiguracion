@@ -5,12 +5,11 @@ h1{
   font-size: 55px; font-weight: 600; line-height: 70px; color: #90B3EF;
 }
 h2{
-  font-size: :44px; margin-bottom: 30px;
+  font-size: 44px; margin-bottom: 30px;
 }
 .footer-widht{
   position: absolute;
   background-color: black
-
 }
 
 section{
@@ -71,3 +70,57 @@ section{
   margin: 0 auto 60px auto;
   text-align: center;
 }
+/* -------------------------------LOGIN--------------------------------------- */
+.login-box{
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: solid 1px black ;
+  background-color: whitesmoke;
+
+}
+.login-icon{
+  width: 150px;
+  height: 150px;
+  display:block;
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+
+}
+.title-ingresar{
+  font-size: 30px;
+  text-align: center;
+
+}
+.lbl-username{
+
+}
+.lbl-userpassword{
+  
+}
+.form-login > .inpt-log{
+  width: 100%;
+  border-width: 1px;
+  border-color: dodgerblue;
+  margin-bottom: 10px;
+}
+
+.inpt-login-button{
+  color:rgba(2, 16, 70, 0.795);
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgba(144, 207, 236, 0.842);
+  display:block;
+  margin:auto;
+  margin-bottom: 10px;
+}
+.no-account{
+  margin: 38px;
+  text-decoration: none;
+}
+/* -------------------------------LOGIN--------------------------------------- */
