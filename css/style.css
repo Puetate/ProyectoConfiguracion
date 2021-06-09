@@ -111,10 +111,15 @@ section{
 }
 
 .inpt-login-button{
-  color:rgba(2, 16, 70, 0.795);
-  font-size: 20px;
+  color:white;
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 100px;
+  border-radius: 2px;
+  display: inline-block;
+  /* font-size: 20px; */
   border-radius: 5px;
-  background-color: rgba(144, 207, 236, 0.842);
+  background-color: #0d6efd;
   display:block;
   margin:auto;
   margin-bottom: 10px;
