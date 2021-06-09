@@ -1,0 +1,46 @@
+section{
+    
+    text-align: center;
+  }
+  section h1{
+    margin-top: 10px;
+    color: rgba( 0, 0, 0.5);
+  }
+  form {
+    border-radius: 15px;
+    background: #EAEDED;
+    display: inline-block;
+    color: rgba( 0, 0, 0.5);
+    width: 580px;
+    height: 400px;
+    max-width: 650px;
+    margin: 0 auto;
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form label {
+    
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: right;
+    width: 210px;
+    
+}
+
+form input {
+    display: inline-block;
+    margin-top: 20px;
+
+    width: 300px;
+
+    margin-bottom: 10px;
+   /* ancho del input*/
+    height: 35px;
+}
+
+
