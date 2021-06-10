@@ -24,7 +24,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"> <img src="assets/images/Screenshot_6.png" class="logo-brand"
+            <a title="Ir a la página principal UTA help!!" class="navbar-brand" href="index.html"> <img src="assets/images/Screenshot_6.png" class="logo-brand"
                     alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -54,39 +54,47 @@
     <section id="hero" class="reg">
         <!-- ----------------------registro--------------------- -->
         <div class="registrarse">
-        <div class="registrarse-box">
-            <!--  <img src="assets/images/Screenshot_6.png">-->
-            
-            <form action="" class="ingresoDatos">
+            <div class="registrarse-box">
+                <!--  <img src="assets/images/Screenshot_6.png">-->
+
                 <hgroup>
                     <div class="form-group">
-           
-            <form class="form-registro">
-                
-                    <img class="login-icon" src="assets/images/Screenshot_6.png">
-                    <h1 class="title_registro">Registrate</h1>
-                    
-                        <label for="nombre">Nombre: </label>                        
-                        <input class="inpt-regis" type="text" placeholder="Ingrese su nombre" required>
-                        <label for="apellido">Apellido:</label>                        
-                        <input class="inpt-regis" type="text" placeholder="Ingrese su apellido" required>
-                        <label for="Telefono">Teléfono:</label>                        
-                        <input class="inpt-regis" type="text" placeholder="Ingrese su telefono" required>
-                        <label for="nom_Usuario">Nombre de usuario:</label>                        
-                        <input class="inpt-regis" type="text" placeholder="Ingrese su nombre de usuario" required>
-                        <label for="correo">e-mail:</label>                        
-                        <input class="inpt-regis" type="text" placeholder="Ingrese su correo electronico" required>
-                        <label for="contraseña">Contraseña:</label>                       
-                        <input class="inpt-regis" type="password" placeholder="Ingrese su contraseña" required>
-                        <button type="button" class="inpt-registrarse-button">Registrarse</button>
 
+                        <form action="registro.php" class="form-registro" method="POST">
+
+                            <img class="login-icon" src="assets/images/Screenshot_6.png">
+                            <h1 class="title_registro">Registrate</h1>
+
+                            <label for="nombre">Nombre: </label>
+                            <input id="nombre" name="username" class="inpt-regis" type="text"
+                                placeholder="Ingrese su nombre" title="Ingrese su nombre" required autofocus>
+                            <label for="apellido">Apellido:</label>
+                            <input id="apellido" name="usersurname" class="inpt-regis" type="text"
+                                placeholder="Ingrese su apellido" title="Ingrese su apellido" required>
+                            <label for="telefono">Teléfono:</label>
+                            <input id="telefono" name="phone" class="inpt-regis" type="tel" minlength="0" maxlength="10"
+                                placeholder="Ingrese su telefono" title="Ingrese su telefono" required>
+                            <label for="nom_usuario">Nombre de usuario:</label>
+                            <input id="nom_usuario" name="user" class="inpt-regis" type="text"
+                                placeholder="Ingrese su nombre de usuario" title="Ingrese su nombre de usuario"
+                                required>
+                            <label for="correo">e-mail:</label>
+                            <input id="correo" name="useremail" class="inpt-regis" type="email"
+                                placeholder="Ingrese su correo electronico"
+                                title="Ingrese su correo electronico Institucional" required>
+                            <label for="contraseña">Contraseña:</label>
+                            <input id="contraseña" name="userpassword" class="inpt-regis" type="password" minlength="0"
+                                maxlength="8" placeholder="Ingrese su contraseña"
+                                title="Ingrese su contraseña máximo 8 caracteres se recomienda el uso de MAYUSCULAS y números"
+                                required>
+                            <input type="submit" name="registro" id="enviar" value="Registrarse" title="Registrarse">
+                        </form>
                     </div>
                 </hgroup>
-                   
-               
-        </div>
 
-        </form>
+
+            </div>
+
         </div>
     </section>
     <div id="contactos" class="container-fluid footer-widht">
