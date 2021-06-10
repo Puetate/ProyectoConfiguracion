@@ -1,46 +1,84 @@
 section{
     
-    text-align: center;
-  }
-  section h1{
-    margin-top: 10px;
-    color: rgba( 0, 0, 0.5);
-  }
-  form {
-    border-radius: 15px;
-    background: #EAEDED;
-    display: inline-block;
-    color: rgba( 0, 0, 0.5);
-    width: 580px;
-    height: 400px;
-    max-width: 650px;
-    margin: 0 auto;
-   
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+}
+section h1{
+  margin-top: 10px;
+  color: rgba( 0, 0, 0.5);
+  font-size: 40px;
+  margin-top: 5px;
+  color: rgb(88, 88, 126);
+}
+
+.title_registro{
+  padding-top: 5px;
+  font-size: 40px;
+  text-align: center;
+
+}
+.registrarse-box{
+  padding-top: 50px;
+
+}
+
+.form-registro > .inpt-regis{
+ 
+  border-width: 1px;
+  border-color: dodgerblue;
+  
+}
+.inpt-registrarse-button{
+  color:white;
+  font-size: 14px;
+  padding: 20px 26px;
+  min-width: 100px;
+  border-radius: 2px;
+  display: inline-block;
+  /* font-size: 20px; */
+  border-radius: 5px;
+  background-color: #0d6efd;
+  display:block;
+  margin:auto;
+  margin-bottom: 10px;
+}
+
+form {
+  border-radius: 15px;
+  background: #EAEDED;
+  display: inline-block;
+  color: rgba( 0, 0, 0.5);
+  width: 580px;
+  height: 400px;
+  width: 500px;
+  height: 660px;
+  max-width: 650px;
+  margin: 0 auto;
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
 
 }
 
 form label {
-    
-    font-size: 24px;
-    font-weight: bold;
-    display: inline-block;
-    text-align: right;
-    width: 210px;
-    
+  
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: right;
+  text-align: left;
+  width: 210px;
+  
 }
 
 form input {
-    display: inline-block;
-    margin-top: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-top: 8px;
+  width: 250px;
 
-    width: 300px;
-
-    margin-bottom: 10px;
-   /* ancho del input*/
-    height: 35px;
+  margin-bottom: 10px;
+ /* ancho del input*/
+  height: 35px;
 }
-
-
