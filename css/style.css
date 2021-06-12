@@ -49,7 +49,7 @@ section{
   background-size: cover;
   padding-top: 90px;
   min-height: 500px;
-  color white;
+  color: white;
 }
 
 .btn{
@@ -70,6 +70,30 @@ section{
   margin: 0 auto 60px auto;
   text-align: center;
 }
+/************************************PRUEBAS************************************/
+.navbar-toggler:focus {
+  text-decoration: none;
+  box-shadow: none;
+ 
+}
+.navbar-toggler:active{
+ background-size: 85%;
+}
+.navbar-toggler{
+  background: url('../assets/images/menu.png')no-repeat ;
+  background-position:center;
+  background-size: 70%;
+}
+
+@media (min-width: 992px) {
+  /*.navbar-expand-lg {flex-wrap: nowrap;justify-content: flex-start;}
+  .navbar-expand-lg .navbar-nav { flex-direction: row; }
+  .navbar-expand-lg .navbar-nav .dropdown-menu { position: absolute; }
+  .navbar-expand-lg .navbar-nav .nav-link { padding-right: 0.5rem; padding-left: 0.5rem; }
+  .navbar-expand-lg .navbar-nav-scroll { overflow: visible; }
+  .navbar-expand-lg .navbar-collapse { flex-basis: auto; display: flex !important; }*/
+}
+/************************************PRUEBAS************************************/
 /* -------------------------------LOGIN--------------------------------------- */
 .login-box{
   border-radius: 10px;
