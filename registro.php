@@ -26,24 +26,21 @@ $phone= $_POST['phone'];
 $user= $_POST['user'];
 $email = $_POST['useremail'];
 $pass = $_POST['userpassword'];
-
+//*********En caso de que ponga un confirmar contraseña******* */
 //$rpass = $_POST['rpass'];
-
-//Obtiene la longitus de un string
-
 //se confirma la contraseña
 /*if ($pass != $rpass) {
-	die('Las contraseñas no coinciden, Verifique <br /> <a href="index.html">Volver</a>');
+	
 }*/
-
+//*************************************************************** */
 //se encripta la contraseña
-//$contraseñaUser = md5($pass);
-//ingresamos la informacion a la base de datos
+$encryptedpass = password_hash($pass,PASSWORD_DEFAULT);
+//Se realiza la sentencia sql
 $insert="INSERT INTO usuario
-(COD_USU, NOM_USU, APE_USU,COR_USU,TEL_USU,NIC_USU,CON_USU,ADM_USU) VALUES('','$name','$surname','$email','$phone','$user','$pass',NULL)";
-
+(COD_USU, NOM_USU, APE_USU,COR_USU,TEL_USU,NIC_USU,CON_USU,ADM_USU) VALUES('','$name','$surname','$email','$phone','$user','$encryptedpass',NULL)";
+//Se ingresa la información a la base de datos
 mysqli_query($connect,$insert);
-
+//Se desconecta de la base de datos
 mysqli_close($connect);
 		}
 echo'<script>alert("Registro Exitoso");location.href="index.html";</script>';
