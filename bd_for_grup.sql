@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-06-2021 a las 02:18:42
+-- Tiempo de generación: 12-06-2021 a las 17:13:58
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -109,7 +109,7 @@ CREATE TABLE `usuario` (
   `COR_USU` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `TEL_USU` int(10) NOT NULL,
   `NIC_USU` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `CON_USU` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  `CON_USU` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `ADM_USU` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

@@ -16,7 +16,7 @@
 </body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"> <img src="assets/images/Screenshot_6.png" class="logo-brand"
+            <a title="Ir a la página principal UTA help!!" class="navbar-brand" href="index.html"> <img src="assets/images/Screenshot_6.png" class="logo-brand"
                     alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -46,12 +46,12 @@
         <div class="login-box">
             <img class="login-icon" src="assets/images/Screenshot_6.png">
             <h1 class="title-ingresar">UTA Help</h1>
-            <form class="form-login" action="">
+            <form class="form-login" action="login.php" method="POST">
                 <label class="lbl-username" for="username">Usuario:</label>
-                <input class="inpt-log" type="text" placeholder="Ingrese su nombre de usuario" autofocus required>
+                <input title="Ingrese su nombre de usuario" name="user" class="inpt-log" type="text" placeholder="Ingrese su nombre de usuario" autofocus required>
                 <label class="lbl-userpassword" for="userpassword" >Contraseña:</label>
-                <input class="inpt-log" type="password" placeholder="Ingrese su contraseña" minlength="0" maxlength="8" required>
-                <input class="inpt-login-button" type="button" value="Acceder">
+                <input title="Ingrese su contraseña" name="userpassword" class="inpt-log" type="password" placeholder="Ingrese su contraseña" minlength="0" maxlength="8" required>
+                <input title="Acceder" class="inpt-login-button" type="submit" value="Acceder">
                 <a class="no-account" href="formulario.html">¿No posee una cuenta? ¡Registrese ahora!</a>
             </form>
             
