@@ -1,76 +1,85 @@
-section{
-    
-  text-align: center;
-}
-section h1{
-  margin-top: 10px;
-  color: rgba( 0, 0, 0.5);
-  font-size: 40px;
-  margin-top: 5px;
-  color: rgb(88, 88, 126);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
 .title_registro{
-  padding-top: 5px;
+  
   font-size: 40px;
   text-align: center;
+  margin-bottom: 1px;
 
 }
+.input-ingreso{
+  text-align: center;
+    width: 300px;
+    
+    float: left;
+    margin: 20px 0px;
+    margin-top: 0px;
+}
 .registrarse-box{
+  
   padding-top: 50px;
 
 }
 
-.form-registro > .inpt-regis{
+.input-ingreso > .inpt-regis{
   text-align: left;
   border-width: 1px;
   border-color: dodgerblue;
   
 }
 .inpt-registrarse-button{
+  
   color:white;
   font-size: 15px;
+  
   padding: 15px;
   min-width: 80px;
   border-radius: 2px;
-  display: inline-block;
+
   /* font-size: 20px; */
   border-radius: 5px;
   background-color: #0d6efd;
   display:block;
-  margin:auto;
+  margin: auto;
   margin-bottom: 60px;
-  margin-top: 9px;
+  
+  
 }
 
 .form-group {
+  
+  padding-top: 24px;
   border-radius: 15px;
   background-color: whitesmoke;
-  display: inline-block;
-  color: rgba( 0, 0, 0.5);
+  display:flex;
   
-  width: 400px;
-  height: 750px;
+  text-align: left;
+  width: 520px;
+  height: 580px;
   max-width: 650px;
-  margin: 0 auto;
+  margin: auto;
  
   flex-direction: column;
   justify-content: left;
   
   align-items: left;
-  padding-top: 24px;
-
+  
+  
 }
 
 /* estilos inputs*/
 form input {
   text-align: left;
   background-color: whitesmoke;
-  display: inline-block;
+  display: block;
   
   margin-top: 25px;
   width: 240px;
-
+  margin-left: 30px;
   margin-bottom: 10px;
  /* ancho del input*/
   height: 35px;
@@ -85,10 +94,31 @@ form input {
   margin:auto;
   border-radius: 50%;
   border: 1px solid black;
+  margin-top: 100px;
+  
   
 }
 
-.form-group input:active, .form-group input:focus{
+/*.input-ingreso input:active, .input-ingreso input:focus{
   outline: none;
   
+}*/
+
+.input-ingreso input:active, .input-ingreso input:focus{
+  
+  outline-color: #0d6efd;
+  
 }
+
+.input-ingreso .submit{
+  width: 100%;
+  padding: 70px;
+}
+
+.imagen{
+  text-align: center;
+  width: 200px;
+  float: left;
+  margin-top: 40px;
+}
+

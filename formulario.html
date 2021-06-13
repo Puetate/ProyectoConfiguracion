@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/images/icono_Barra.png">
     <title>Registrate</title>
-    
+
 </head>
 
 <body>
@@ -59,35 +59,47 @@
 
                     <form action="registro.php" class="form-registro" method="POST">
 
-                        <img class="registrar-icon" src="assets/images/Screenshot_6.png">
+
                         <h1 class="title_registro">Registrarse</h1>
 
-                        
-                        <input id="nombre" name="username" class="inpt-regis" type="text"
-                            placeholder="Nombre" title="Ingrese su nombre" required autofocus>
-                        
-                        <input id="apellido" name="usersurname" class="inpt-regis" type="text"
-                            placeholder="Apellido" title="Ingrese su apellido" required>
-                        
-                        <input id="telefono" name="phone" class="inpt-regis" type="tel" minlength="0" maxlength="10"
-                            placeholder="Telefono" title="Ingrese su telefono" required>
-                        
-                        <input id="nom_usuario" name="user" class="inpt-regis" type="text"
-                            placeholder="Nombre de usuario" title="Ingrese su nombre de usuario" required>
-                        
-                        <input id="correo" name="useremail" class="inpt-regis" type="email"
-                            placeholder="Correo electronico"
-                            title="Ingrese su correo electronico Institucional" required>
-                        
-                        <input id="contraseña" name="userpassword" class="inpt-regis" type="password" minlength="0"
-                            maxlength="8" placeholder="Contraseña"
-                            title="Ingrese su contraseña máximo 8 caracteres se recomienda el uso de MAYUSCULAS y números"
-                            required>
+                        <div class="input-ingreso">
 
+
+                            <input id="nombre" name="username" class="inpt-regis" type="text" placeholder="Nombre"
+                                title="Ingrese su nombre" required autofocus>
+
+                            <input id="apellido" name="usersurname" class="inpt-regis" type="text"
+                                placeholder="Apellido" title="Ingrese su apellido" required>
+
+                            <input id="telefono" name="phone" class="inpt-regis" type="tel" minlength="0" maxlength="10"
+                                placeholder="Telefono" title="Ingrese su telefono" required>
+
+                            <input id="nom_usuario" name="user" class="inpt-regis" type="text"
+                                placeholder="Nombre de usuario" title="Ingrese su nombre de usuario" required>
+
+                            <input id="correo" name="useremail" class="inpt-regis" type="email"
+                                placeholder="Correo electronico" title="Ingrese su correo electronico Institucional"
+                                required>
+
+                            <input id="contraseña" name="userpassword" class="inpt-regis" type="password" minlength="0"
+                                maxlength="8" placeholder="Contraseña"
+                                title="Ingrese su contraseña máximo 8 caracteres se recomienda el uso de MAYUSCULAS y números"
+                                required>
+                           
+
+                        </div>
+                        
+                        <div class="imagen">
+                            <img class="registrar-icon" src="assets/images/Screenshot_6.png">
+                        </div>
                     </form>
-                    <input class="inpt-registrarse-button" type="submit" name="registro" id="enviar" value="Registrarse"
-                        title="Registrarse">
+                   
+                    <div class="boton">
+                        <input class="inpt-registrarse-button" type="submit" name="registro" id="enviar" value="REGISTRARSE"
+                     title="Registrarse">
+                    </div>
                 </div>
+                
 
 
 
