@@ -13,7 +13,7 @@
 }
 .input-ingreso{
   text-align: center;
-    width: 287px;
+    width: 200px;
 
     float: left;
     margin: 20px 0px;
@@ -42,7 +42,7 @@
   margin:auto;
   border-radius: 50%;
   border: 1px solid black;
-  margin-top: 100px;
+  margin-top: 147px;
 
 
 }
@@ -53,25 +53,6 @@
 }*/
 
 
-.inpt-registrarse-button{
-
-  color:white;
-  font-size: 15px;
-
-  padding: 15px;
-  min-width: 80px;
-  border-radius: 2px;
-
-  /* font-size: 20px; */
-  border-radius: 5px;
-  background-color: #0d6efd;
-  display:block;
-  margin: auto;
-  margin-bottom: 60px;
-
-
-}
-
 .form-group {
 
   padding-top: 24px;
@@ -80,7 +61,7 @@
   display:flex;
 
   text-align: left;
-  width: 464px; /* aqui!!!!*/
+  width: 330px; /* aqui!!!!*/
   height: 540px;
 
   margin: auto;
@@ -93,6 +74,27 @@
 
 }
 
+
+.inpt-registrarse-button{
+
+  color:white;
+  font-size: 15px;
+
+  padding: 15px;
+
+  border-radius: 2px;
+
+  /* font-size: 20px; */
+  border-radius: 5px;
+  background-color: #0d6efd;
+  display:block;
+  margin: auto;
+  margin-bottom: 60px;
+
+
+}
+
+
 /* estilos inputs*/
 form input {
   text-align: left;
@@ -100,7 +102,7 @@ form input {
   display: block;
 
   margin-top: 20px;
-  width: 240px;
+  width: 180px; /* aqui!!!!*/
   margin-left: 23px;
   margin-bottom: 12px;
  /* ancho del input*/
@@ -124,9 +126,8 @@ form input {
   padding: 70px;
 }
 
-.imagen{
-  text-align: center;
+img {
   width: 100px;
-  float: left;
-  margin-top: 20px;
+  display: block;
+  
 }
