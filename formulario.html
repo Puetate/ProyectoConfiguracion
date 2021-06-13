@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleformulario.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/images/icono_Barra.png">
-
-
-
     <title>Registrate</title>
+    
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a title="Ir a la página principal UTA help!!" class="navbar-brand" href="index.html"> <img src="assets/images/Screenshot_6.png" class="logo-brand"
-                    alt="logo"></a>
+            <a title="Ir a la página principal UTA help!!" class="navbar-brand" href="index.html"> <img
+                    src="assets/images/Screenshot_6.png" class="logo-brand" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -57,40 +54,42 @@
             <div class="registrarse-box">
                 <!--  <img src="assets/images/Screenshot_6.png">-->
 
-                <hgroup>
-                    <div class="form-group">
 
-                        <form action="registro.php" class="form-registro" method="POST">
+                <div class="form-group">
 
-                            <img class="login-icon" src="assets/images/Screenshot_6.png">
-                            <h1 class="title_registro">Registrate</h1>
+                    <form action="registro.php" class="form-registro" method="POST">
 
-                            <label for="nombre">Nombre: </label>
-                            <input id="nombre" name="username" class="inpt-regis" type="text"
-                                placeholder="Ingrese su nombre" title="Ingrese su nombre" required autofocus>
-                            <label for="apellido">Apellido:</label>
-                            <input id="apellido" name="usersurname" class="inpt-regis" type="text"
-                                placeholder="Ingrese su apellido" title="Ingrese su apellido" required>
-                            <label for="telefono">Teléfono:</label>
-                            <input id="telefono" name="phone" class="inpt-regis" type="tel" minlength="0" maxlength="10"
-                                placeholder="Ingrese su telefono" title="Ingrese su telefono" required>
-                            <label for="nom_usuario">Nombre de usuario:</label>
-                            <input id="nom_usuario" name="user" class="inpt-regis" type="text"
-                                placeholder="Ingrese su nombre de usuario" title="Ingrese su nombre de usuario"
-                                required>
-                            <label for="correo">e-mail:</label>
-                            <input id="correo" name="useremail" class="inpt-regis" type="email"
-                                placeholder="Ingrese su correo electronico"
-                                title="Ingrese su correo electronico Institucional" required>
-                            <label for="contraseña">Contraseña:</label>
-                            <input id="contraseña" name="userpassword" class="inpt-regis" type="password" minlength="0"
-                                maxlength="8" placeholder="Ingrese su contraseña"
-                                title="Ingrese su contraseña máximo 8 caracteres se recomienda el uso de MAYUSCULAS y números"
-                                required>
-                            <input type="submit" name="registro" id="enviar" value="Registrarse" title="Registrarse">
-                        </form>
-                    </div>
-                </hgroup>
+                        <img class="registrar-icon" src="assets/images/Screenshot_6.png">
+                        <h1 class="title_registro">Registrarse</h1>
+
+                        
+                        <input id="nombre" name="username" class="inpt-regis" type="text"
+                            placeholder="Nombre" title="Ingrese su nombre" required autofocus>
+                        
+                        <input id="apellido" name="usersurname" class="inpt-regis" type="text"
+                            placeholder="Apellido" title="Ingrese su apellido" required>
+                        
+                        <input id="telefono" name="phone" class="inpt-regis" type="tel" minlength="0" maxlength="10"
+                            placeholder="Telefono" title="Ingrese su telefono" required>
+                        
+                        <input id="nom_usuario" name="user" class="inpt-regis" type="text"
+                            placeholder="Nombre de usuario" title="Ingrese su nombre de usuario" required>
+                        
+                        <input id="correo" name="useremail" class="inpt-regis" type="email"
+                            placeholder="Correo electronico"
+                            title="Ingrese su correo electronico Institucional" required>
+                        
+                        <input id="contraseña" name="userpassword" class="inpt-regis" type="password" minlength="0"
+                            maxlength="8" placeholder="Contraseña"
+                            title="Ingrese su contraseña máximo 8 caracteres se recomienda el uso de MAYUSCULAS y números"
+                            required>
+
+                    </form>
+                    <input class="inpt-registrarse-button" type="submit" name="registro" id="enviar" value="Registrarse"
+                        title="Registrarse">
+                </div>
+
+
 
 
             </div>

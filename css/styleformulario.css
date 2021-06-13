@@ -22,16 +22,16 @@ section h1{
 }
 
 .form-registro > .inpt-regis{
- 
+  text-align: left;
   border-width: 1px;
   border-color: dodgerblue;
   
 }
 .inpt-registrarse-button{
   color:white;
-  font-size: 14px;
-  padding: 20px 26px;
-  min-width: 100px;
+  font-size: 15px;
+  padding: 15px;
+  min-width: 80px;
   border-radius: 2px;
   display: inline-block;
   /* font-size: 20px; */
@@ -39,46 +39,56 @@ section h1{
   background-color: #0d6efd;
   display:block;
   margin:auto;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
+  margin-top: 9px;
 }
 
-form {
+.form-group {
   border-radius: 15px;
-  background: #EAEDED;
+  background-color: whitesmoke;
   display: inline-block;
   color: rgba( 0, 0, 0.5);
-  width: 580px;
-  height: 400px;
-  width: 500px;
-  height: 660px;
+  
+  width: 400px;
+  height: 750px;
   max-width: 650px;
   margin: 0 auto;
  
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  
+  align-items: left;
   padding-top: 24px;
 
 }
 
-form label {
-  
-  font-size: 24px;
-  font-weight: bold;
-  display: inline-block;
-  text-align: right;
-  text-align: left;
-  width: 210px;
-  
-}
-
+/* estilos inputs*/
 form input {
+  text-align: left;
+  background-color: whitesmoke;
   display: inline-block;
-  margin-top: 20px;
-  margin-top: 8px;
-  width: 250px;
+  
+  margin-top: 25px;
+  width: 240px;
 
   margin-bottom: 10px;
  /* ancho del input*/
   height: 35px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: black;
+  
+}
+
+.registrar-icon{
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+  
+}
+
+.form-group input:active, .form-group input:focus{
+  outline: none;
+  
 }
