@@ -1,84 +1,128 @@
-section{
-    
-  text-align: center;
-}
-section h1{
-  margin-top: 10px;
-  color: rgba( 0, 0, 0.5);
-  font-size: 40px;
-  margin-top: 5px;
-  color: rgb(88, 88, 126);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
 .title_registro{
-  padding-top: 5px;
+  
   font-size: 40px;
   text-align: center;
+  margin-bottom: 1px;
 
 }
+.input-ingreso{
+  text-align: center;
+    width: 300px;
+    
+    float: left;
+    margin: 20px 0px;
+    margin-top: 0px;
+}
 .registrarse-box{
+  
   padding-top: 50px;
 
 }
+.form-registro  > .inpt-regis{
+  width: 100%;
+}
 
-.form-registro > .inpt-regis{
- 
+.input-ingreso > .inpt-regis{
+  
+  text-align: left;
   border-width: 1px;
   border-color: dodgerblue;
   
 }
 .inpt-registrarse-button{
+  
   color:white;
-  font-size: 14px;
-  padding: 20px 26px;
-  min-width: 100px;
+  font-size: 15px;
+  
+  padding: 15px;
+  min-width: 80px;
   border-radius: 2px;
-  display: inline-block;
+
   /* font-size: 20px; */
   border-radius: 5px;
   background-color: #0d6efd;
   display:block;
-  margin:auto;
-  margin-bottom: 10px;
+  margin: auto;
+  margin-bottom: 60px;
+  
+  
 }
 
-form {
+.form-group {
+  
+  padding-top: 24px;
   border-radius: 15px;
-  background: #EAEDED;
-  display: inline-block;
-  color: rgba( 0, 0, 0.5);
-  width: 580px;
-  height: 400px;
-  width: 500px;
-  height: 660px;
+  background-color: whitesmoke;
+  display:flex;
+  
+  text-align: left;
+  width: 520px;
+  height: 580px;
   max-width: 650px;
-  margin: 0 auto;
+  margin: auto;
  
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 24px;
-
-}
-
-form label {
+  justify-content: left;
   
-  font-size: 24px;
-  font-weight: bold;
-  display: inline-block;
-  text-align: right;
-  text-align: left;
-  width: 210px;
+  align-items: left;
+  
   
 }
 
+/* estilos inputs*/
 form input {
-  display: inline-block;
-  margin-top: 20px;
-  margin-top: 8px;
-  width: 250px;
-
+  text-align: left;
+  background-color: whitesmoke;
+  display: block;
+  
+  margin-top: 25px;
+  width: 240px;
+  margin-left: 30px;
   margin-bottom: 10px;
  /* ancho del input*/
   height: 35px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: black;
+  
 }
+
+.registrar-icon{
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 100px;
+  
+  
+}
+
+/*.input-ingreso input:active, .input-ingreso input:focus{
+  outline: none;
+  
+}*/
+
+.input-ingreso input:active, .input-ingreso input:focus{
+  
+  outline-color: #0d6efd;
+  
+}
+
+.input-ingreso .submit{
+  width: 100%;
+  padding: 70px;
+}
+
+.imagen{
+  text-align: center;
+  width: 200px;
+  float: left;
+  margin-top: 40px;
+}
+
