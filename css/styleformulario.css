@@ -5,7 +5,7 @@
 }
 
 .title_registro{
-  
+
   font-size: 40px;
   text-align: center;
   margin-bottom: 1px;
@@ -13,14 +13,15 @@
 }
 .input-ingreso{
   text-align: center;
-    width: 300px;
-    
+    width: 287px;
+
     float: left;
     margin: 20px 0px;
     margin-top: 0px;
+
 }
 .registrarse-box{
-  
+
   padding-top: 50px;
 
 }
@@ -29,17 +30,34 @@
 }
 
 .input-ingreso > .inpt-regis{
-  
+
   text-align: left;
   border-width: 1px;
   border-color: dodgerblue;
-  
+
 }
+
+
+.registrar-icon{
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-top: 100px;
+
+
+}
+
+/*.input-ingreso input:active, .input-ingreso input:focus{
+  outline: none;
+
+}*/
+
+
 .inpt-registrarse-button{
-  
+
   color:white;
   font-size: 15px;
-  
+
   padding: 15px;
   min-width: 80px;
   border-radius: 2px;
@@ -50,29 +68,29 @@
   display:block;
   margin: auto;
   margin-bottom: 60px;
-  
-  
+
+
 }
 
 .form-group {
-  
+
   padding-top: 24px;
   border-radius: 15px;
   background-color: whitesmoke;
   display:flex;
-  
+
   text-align: left;
-  width: 520px;
-  height: 580px;
-  max-width: 650px;
+  width: 464px; /* aqui!!!!*/
+  height: 540px;
+
   margin: auto;
- 
+
   flex-direction: column;
   justify-content: left;
-  
+
   align-items: left;
-  
-  
+
+
 }
 
 /* estilos inputs*/
@@ -80,38 +98,25 @@ form input {
   text-align: left;
   background-color: whitesmoke;
   display: block;
-  
-  margin-top: 25px;
+
+  margin-top: 20px;
   width: 240px;
-  margin-left: 30px;
-  margin-bottom: 10px;
+  margin-left: 23px;
+  margin-bottom: 12px;
  /* ancho del input*/
   height: 35px;
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
   color: black;
-  
-}
 
-.registrar-icon{
-  margin:auto;
-  border-radius: 50%;
-  border: 1px solid black;
-  margin-top: 100px;
-  
-  
-}
 
-/*.input-ingreso input:active, .input-ingreso input:focus{
-  outline: none;
-  
-}*/
+}
 
 .input-ingreso input:active, .input-ingreso input:focus{
-  
+
   outline-color: #0d6efd;
-  
+
 }
 
 .input-ingreso .submit{
@@ -121,8 +126,7 @@ form input {
 
 .imagen{
   text-align: center;
-  width: 200px;
+  width: 100px;
   float: left;
-  margin-top: 40px;
+  margin-top: 20px;
 }
-
