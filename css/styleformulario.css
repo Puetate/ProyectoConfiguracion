@@ -24,8 +24,12 @@
   padding-top: 50px;
 
 }
+.form-registro  > .inpt-regis{
+  width: 100%;
+}
 
 .input-ingreso > .inpt-regis{
+  
   text-align: left;
   border-width: 1px;
   border-color: dodgerblue;
