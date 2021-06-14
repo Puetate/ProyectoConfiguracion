@@ -31,7 +31,7 @@ echo "Usuario encontrado";
 }
 else
 {
-echo "No se encontro el usuario"; 
+echo '<script>location.href="forum.html";</script>'; 
 }
 /* liberar el conjunto de resultados */
 mysqli_free_result($busqueda);
