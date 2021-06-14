@@ -27,11 +27,11 @@ while ($row = mysqli_fetch_assoc($busqueda)) {
 }
 if($finduser)
 {
-echo "Usuario encontrado";
+echo '<script>location.href="forum.html";</script>'; 
 }
 else
 {
-echo '<script>location.href="forum.html";</script>'; 
+echo '<script>alert("Nombre de Usuario o Contraseña Incorrectos");location.href="login.html";</script>'; 
 }
 /* liberar el conjunto de resultados */
 mysqli_free_result($busqueda);

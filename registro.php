@@ -33,7 +33,22 @@ $pass = $_POST['userpassword'];
 	
 }*/
 //*************************************************************** */
-//se encripta la contraseña
+$search="SELECT NIC_USU,COR_USU  FROM usuario";
+$busqueda=mysqli_query($connect,$search);
+$finduser=FALSE;
+while ($row = mysqli_fetch_assoc($busqueda)) {
+    if(($row["NIC_USU"]==$user)or($row["COR_USU"]==$email))
+    {
+        $finduser=TRUE; 
+    }
+}
+if($finduser)
+{
+	echo '<script>alert("Nombre de Usuario o Correo ya Utilizado");location.href="formulario.html";</script>'; 
+}
+else
+{
+	//se encripta la contraseña
 $encryptedpass = password_hash($pass,PASSWORD_DEFAULT);
 //Se realiza la sentencia sql
 $insert="INSERT INTO usuario
@@ -43,5 +58,8 @@ mysqli_query($connect,$insert);
 //Se desconecta de la base de datos
 mysqli_close($connect);
 		}
-echo'<script>alert("Registro Exitoso");location.href="index.html";</script>';
+echo'<script>location.href="forum.html";</script>';
+
+}
+
 ?>
