@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-06-2021 a las 17:13:58
+-- Tiempo de generación: 14-06-2021 a las 20:26:54
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_for_grup`
 --
+CREATE DATABASE IF NOT EXISTS `bd_for_grup` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `bd_for_grup`;
 
 -- --------------------------------------------------------
 
@@ -27,6 +29,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `comentario`
 --
 
+DROP TABLE IF EXISTS `comentario`;
 CREATE TABLE `comentario` (
   `COD_COM` int(11) NOT NULL,
   `TEX_COM` longtext COLLATE utf8_unicode_ci NOT NULL,
@@ -39,6 +42,7 @@ CREATE TABLE `comentario` (
 -- Estructura de tabla para la tabla `curso`
 --
 
+DROP TABLE IF EXISTS `curso`;
 CREATE TABLE `curso` (
   `COD_CUR` int(11) NOT NULL,
   `COD_USU_CRE` smallint(6) NOT NULL,
@@ -51,6 +55,7 @@ CREATE TABLE `curso` (
 -- Estructura de tabla para la tabla `enviar_comentario`
 --
 
+DROP TABLE IF EXISTS `enviar_comentario`;
 CREATE TABLE `enviar_comentario` (
   `COD_ENV` int(11) NOT NULL,
   `FEC_ENV` datetime NOT NULL DEFAULT current_timestamp(),
@@ -64,6 +69,7 @@ CREATE TABLE `enviar_comentario` (
 -- Estructura de tabla para la tabla `enviar_mensaje`
 --
 
+DROP TABLE IF EXISTS `enviar_mensaje`;
 CREATE TABLE `enviar_mensaje` (
   `COD_ENV` int(11) NOT NULL,
   `FEC_ENV` datetime NOT NULL DEFAULT current_timestamp(),
@@ -78,6 +84,7 @@ CREATE TABLE `enviar_mensaje` (
 -- Estructura de tabla para la tabla `mensaje`
 --
 
+DROP TABLE IF EXISTS `mensaje`;
 CREATE TABLE `mensaje` (
   `COD_MEN` int(11) NOT NULL,
   `TEX_MEN` longtext COLLATE utf8_unicode_ci NOT NULL
@@ -89,6 +96,7 @@ CREATE TABLE `mensaje` (
 -- Estructura de tabla para la tabla `registro`
 --
 
+DROP TABLE IF EXISTS `registro`;
 CREATE TABLE `registro` (
   `COD_REG` int(11) NOT NULL,
   `FEC_REG` datetime NOT NULL DEFAULT current_timestamp(),
@@ -102,6 +110,7 @@ CREATE TABLE `registro` (
 -- Estructura de tabla para la tabla `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `COD_USU` smallint(6) NOT NULL,
   `NOM_USU` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
@@ -112,6 +121,13 @@ CREATE TABLE `usuario` (
   `CON_USU` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `ADM_USU` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`COD_USU`, `NOM_USU`, `APE_USU`, `COR_USU`, `TEL_USU`, `NIC_USU`, `CON_USU`, `ADM_USU`) VALUES
+(1, 'Grupo', 'Grupo', 'grupo@hotmail.com', 987965010, 'APJL', '$2y$10$QDeYsDluGbhuAf4Ot68MLeosU9mmJTZ9englKxlgKvQl9q4rQEaRK', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -203,7 +219,7 @@ ALTER TABLE `registro`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `COD_USU` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `COD_USU` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
