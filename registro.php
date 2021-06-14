@@ -37,7 +37,7 @@ $pass = $_POST['userpassword'];
 $encryptedpass = password_hash($pass,PASSWORD_DEFAULT);
 //Se realiza la sentencia sql
 $insert="INSERT INTO usuario
-(COD_USU, NOM_USU, APE_USU,COR_USU,TEL_USU,NIC_USU,CON_USU,ADM_USU) VALUES('','$name','$surname','$email','$phone','$user','$encryptedpass',NULL)";
+(COD_USU, NOM_USU, APE_USU,COR_USU,TEL_USU,NIC_USU,CON_USU,ADM_USU) VALUES('','$name','$surname','$email','$phone','$user','$encryptedpass',1)";
 //Se ingresa la información a la base de datos
 mysqli_query($connect,$insert);
 //Se desconecta de la base de datos
