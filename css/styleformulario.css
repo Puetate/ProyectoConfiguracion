@@ -80,17 +80,16 @@
   color:white;
   font-size: 15px;
 
-  padding: 15px;
-
-  border-radius: 2px;
-
+  padding-left: 26px;
+  
+  height: 55px;
+  width: 140px;
   /* font-size: 20px; */
   border-radius: 5px;
   background-color: #0d6efd;
   display:block;
+  
   margin: auto;
-  margin-bottom: 60px;
-
 
 }
 
@@ -100,7 +99,7 @@ form input {
   text-align: left;
   background-color: whitesmoke;
   display: block;
-
+  font-size: 15px;
   margin-top: 20px;
   width: 180px; /* aqui!!!!*/
   margin-left: 23px;
