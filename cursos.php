@@ -1,3 +1,21 @@
+<?php
+$link= mysqli_connect('localhost','root','');
+if(!$link)
+{
+echo "No se pudo conectar con el servidor";
+}
+else
+{
+$db="bd_for_grup";
+$sdb=mysqli_select_db($link,$db);
+if(!$sdb)
+{
+echo "No se pudo encotrar la base de datos";
+}
+$search="SELECT c.NOM_CUR,u.NOM_USU FROM curso c,usuario u WHERE c.COD_USU_CRE = u.COD_USU";
+$busqueda=mysqli_query($link,$search);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,13 +80,29 @@
                 </ul>
             </div>
             <!--ForoPublicaciones-->
-            <div class="col-7">
-
-            </div>
-            <!--ChatIzquierda-->
-            <div class="col-3">
-
-            </div>
+            <div class="col-10">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <th>Curso</th>
+                        <th>Docente</th>
+                        <th>Costo</th>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($busqueda)) {?>
+                        <tr>
+                            <td><a href="index.html">
+                                    <?php echo $row['NOM_CUR']; ?>
+                                </a></td>
+                            <a href="index.html">
+                                <td>
+                                    <?php echo $row['NOM_USU']; ?>
+                                </td>
+                            </a>
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
         </div>
 
     </div>
