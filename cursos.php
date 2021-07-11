@@ -99,6 +99,9 @@ $busqueda=mysqli_query($link,$search);
                                     <?php echo $row['NOM_USU']; ?>
                                 </td>
                             </a>
+                            <td>
+                                    1
+                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>

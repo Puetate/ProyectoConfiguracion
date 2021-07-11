@@ -27,7 +27,7 @@ while ($row = mysqli_fetch_assoc($busqueda)) {
 }
 if($finduser)
 {
-echo '<script>location.href="forum.html";</script>'; 
+echo '<script>location.href="forum.php";</script>'; 
 }
 else
 {
