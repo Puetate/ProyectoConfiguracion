@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-06-2021 a las 20:26:54
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 7.2.34
+-- Tiempo de generación: 23-07-2021 a las 03:28:29
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,21 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_for_grup`
 --
-CREATE DATABASE IF NOT EXISTS `bd_for_grup` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `bd_for_grup`;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `comentario`
---
-
-DROP TABLE IF EXISTS `comentario`;
-CREATE TABLE `comentario` (
-  `COD_COM` int(11) NOT NULL,
-  `TEX_COM` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `COD_USU_ENV` smallint(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -42,67 +27,95 @@ CREATE TABLE `comentario` (
 -- Estructura de tabla para la tabla `curso`
 --
 
-DROP TABLE IF EXISTS `curso`;
 CREATE TABLE `curso` (
-  `COD_CUR` int(11) NOT NULL,
-  `COD_USU_CRE` smallint(6) NOT NULL,
-  `NOM_CUR` varchar(80) COLLATE utf8_unicode_ci NOT NULL
+  `ID_CUR` int(11) NOT NULL,
+  `NOM_CUR` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `DES_CUR` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `CED_USU_CREA` varchar(10) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `curso`
+--
+
+INSERT INTO `curso` (`ID_CUR`, `NOM_CUR`, `DES_CUR`, `CED_USU_CREA`) VALUES
+(1, 'POO', 'EN ESTE CURSO SE EMPEZARA A REALIZAR PROGRAMACION ORIENTADA A OBJETOS, ESTA NOS AYUDA A TENER UNA FUNCIONALIDAD MAS FLEXIBLE EN NUESTROS PROGRAMAS.\r\nTIENE VARIAS VENTAJAS AL PROGRAMAR DE ESTA FORMA, EMPEZAREMOS ANALIZANDO ESTE CURSO DESDE SUS CUATRO PILARES FUNDAMENTALES:\r\n1.- ABSTRACCION\r\n2.- ENCAPSULAMIENTO\r\n3.- HERENCIA\r\n4.- POLIMORFISMO', '1234567890'),
+(2, 'BD', 'EN EL CURSO DE BASE DE DATOS SE ENCEÑARAN LAS BASES PARA PODER CREAR UNA BASE DE DATOS QUE CUMPLA CON LA 3RA FORMA NORMAL DE LA MISMA, SE EMPEZARA DESDE LA INSTALACION DE UNA BASE DE DATOS EN ORACLE, Y SE IMLPMENETARAN LOS SISTEMAS TANTO EN ORACLE COMO EN ACCES (\"QUE PERMITE TENER UNA INTERFAZ MAS AGRADABLE A LA VISTA DE LOS USUARIOS\") ESTO CON EL FIN DE TENER UNA MEJOR INTERACCION CON LOS ALUMNOS.', '0123456789');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalle_curso`
+--
+
+CREATE TABLE `detalle_curso` (
+  `CED_USU_PER` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `ID_CUR_PER` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_curso`
+--
+
+INSERT INTO `detalle_curso` (`CED_USU_PER`, `ID_CUR_PER`) VALUES
+('9876543210', 1),
+('0123456789', 2),
+('1234567890', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalle_publicacion`
+--
+
+CREATE TABLE `detalle_publicacion` (
+  `ID_DET_PUB` int(11) NOT NULL,
+  `ID_PUB_PER` int(11) NOT NULL,
+  `CED_USU_PUB` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `DET_PUB` longtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_publicacion`
+--
+
+INSERT INTO `detalle_publicacion` (`ID_DET_PUB`, `ID_PUB_PER`, `CED_USU_PUB`, `DET_PUB`) VALUES
+(1, 2, '0123456789', 'RESPUESTA DEL USUARIO 1 HACIA UNA PUBLICACION QUE REALIZO EL ADMINISTRADOR\r\nESTA SECCION SE UTILIZA PARA RESPONDER A LAS PUBLICACIONES DE LOS USUARIOS'),
+(2, 1, '1234567890', 'RESPUESTA DEL USUARIO ADMINISTRADOR HACIA EL USUARIO 2 QUE REALIZO UNA PUBLICACION, ESTE ESPACIO SE UTILIZA PARA RESPONDER LAS PUBLICACIONES QUE REALIZAN LOS USUARIOS ');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mensajes`
+--
+
+CREATE TABLE `mensajes` (
+  `ID_MEN` int(11) NOT NULL,
+  `CED_USU_ENV` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `CED_USU_REC` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `DET_MEN` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `enviar_comentario`
+-- Estructura de tabla para la tabla `publicacion`
 --
 
-DROP TABLE IF EXISTS `enviar_comentario`;
-CREATE TABLE `enviar_comentario` (
-  `COD_ENV` int(11) NOT NULL,
-  `FEC_ENV` datetime NOT NULL DEFAULT current_timestamp(),
-  `COD_COM_ENV` int(11) NOT NULL,
-  `COD_CUR_ENV` int(11) NOT NULL
+CREATE TABLE `publicacion` (
+  `ID_PUB` int(11) NOT NULL,
+  `CED_USU_PUB` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `IMG_PUB` longblob DEFAULT NULL,
+  `DES_PUB` longtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `enviar_mensaje`
+-- Volcado de datos para la tabla `publicacion`
 --
 
-DROP TABLE IF EXISTS `enviar_mensaje`;
-CREATE TABLE `enviar_mensaje` (
-  `COD_ENV` int(11) NOT NULL,
-  `FEC_ENV` datetime NOT NULL DEFAULT current_timestamp(),
-  `COD_USU_REM` smallint(6) NOT NULL,
-  `COD_USU_REC` smallint(6) NOT NULL,
-  `COD_MEN` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `mensaje`
---
-
-DROP TABLE IF EXISTS `mensaje`;
-CREATE TABLE `mensaje` (
-  `COD_MEN` int(11) NOT NULL,
-  `TEX_MEN` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `registro`
---
-
-DROP TABLE IF EXISTS `registro`;
-CREATE TABLE `registro` (
-  `COD_REG` int(11) NOT NULL,
-  `FEC_REG` datetime NOT NULL DEFAULT current_timestamp(),
-  `COD_CUR_REG` int(11) NOT NULL,
-  `COD_USU_REG` smallint(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `publicacion` (`ID_PUB`, `CED_USU_PUB`, `IMG_PUB`, `DES_PUB`) VALUES
+(1, '9876543210', NULL, 'ESTO ES UN EJEMPLO DE PUBLICACION REALIZADA POR EL USUARIO 2\r\n-ITEMS A TRATAR\r\n-PUNTOS IMPORTANTES\r\n(\"CARACTERES ESPECIALES\")'),
+(2, '1234567890', NULL, 'ESTO ES UNA PUBLICACION REALIZADA POR EL USUARIO ADMINISTRADOR\r\n-USUARIO: ADMI\r\n-CONTRASEÑA: ADMI');
 
 -- --------------------------------------------------------
 
@@ -110,116 +123,127 @@ CREATE TABLE `registro` (
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
-  `COD_USU` smallint(6) NOT NULL,
-  `NOM_USU` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `APE_USU` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `COR_USU` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `TEL_USU` int(10) NOT NULL,
-  `NIC_USU` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `CON_USU` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `ADM_USU` int(11) DEFAULT NULL
+  `CED_USU` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `NOM_USU` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `APE_USU` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `FEC_NAC` date NOT NULL,
+  `FOT_USU` longblob DEFAULT NULL,
+  `NIC_USU` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `CONT_USU` varchar(60) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`COD_USU`, `NOM_USU`, `APE_USU`, `COR_USU`, `TEL_USU`, `NIC_USU`, `CON_USU`, `ADM_USU`) VALUES
-(1, 'Grupo', 'Grupo', 'grupo@hotmail.com', 987965010, 'APJL', '$2y$10$QDeYsDluGbhuAf4Ot68MLeosU9mmJTZ9englKxlgKvQl9q4rQEaRK', NULL);
+INSERT INTO `usuario` (`CED_USU`, `NOM_USU`, `APE_USU`, `FEC_NAC`, `FOT_USU`, `NIC_USU`, `CONT_USU`) VALUES
+('0123456789', 'USU', 'USU', '1997-07-01', NULL, 'USU', 'USU'),
+('1234567890', 'ADMIN', 'ADMIN', '1997-08-11', NULL, 'ADMIN', 'ADMIN'),
+('9876543210', 'USUARIO2', 'USUARIO2', '1991-07-09', NULL, 'USU2', 'USU2');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `comentario`
---
-ALTER TABLE `comentario`
-  ADD PRIMARY KEY (`COD_COM`);
-
---
 -- Indices de la tabla `curso`
 --
 ALTER TABLE `curso`
-  ADD PRIMARY KEY (`COD_CUR`);
+  ADD PRIMARY KEY (`ID_CUR`),
+  ADD KEY `CED_USU_CREA` (`CED_USU_CREA`);
 
 --
--- Indices de la tabla `enviar_comentario`
+-- Indices de la tabla `detalle_curso`
 --
-ALTER TABLE `enviar_comentario`
-  ADD PRIMARY KEY (`COD_ENV`);
+ALTER TABLE `detalle_curso`
+  ADD KEY `CED_USU_PER` (`CED_USU_PER`),
+  ADD KEY `ID_CUR_PER` (`ID_CUR_PER`);
 
 --
--- Indices de la tabla `enviar_mensaje`
+-- Indices de la tabla `detalle_publicacion`
 --
-ALTER TABLE `enviar_mensaje`
-  ADD PRIMARY KEY (`COD_ENV`);
+ALTER TABLE `detalle_publicacion`
+  ADD PRIMARY KEY (`ID_DET_PUB`),
+  ADD KEY `CED_USU_PUB` (`CED_USU_PUB`),
+  ADD KEY `ID_PUB_PER` (`ID_PUB_PER`);
 
 --
--- Indices de la tabla `mensaje`
+-- Indices de la tabla `mensajes`
 --
-ALTER TABLE `mensaje`
-  ADD PRIMARY KEY (`COD_MEN`);
+ALTER TABLE `mensajes`
+  ADD PRIMARY KEY (`ID_MEN`);
 
 --
--- Indices de la tabla `registro`
+-- Indices de la tabla `publicacion`
 --
-ALTER TABLE `registro`
-  ADD PRIMARY KEY (`COD_REG`);
+ALTER TABLE `publicacion`
+  ADD PRIMARY KEY (`ID_PUB`),
+  ADD KEY `CED_USU_PUB` (`CED_USU_PUB`);
 
 --
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`COD_USU`);
+  ADD PRIMARY KEY (`CED_USU`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `comentario`
---
-ALTER TABLE `comentario`
-  MODIFY `COD_COM` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `curso`
 --
 ALTER TABLE `curso`
-  MODIFY `COD_CUR` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_CUR` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `enviar_comentario`
+-- AUTO_INCREMENT de la tabla `detalle_publicacion`
 --
-ALTER TABLE `enviar_comentario`
-  MODIFY `COD_ENV` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `detalle_publicacion`
+  MODIFY `ID_DET_PUB` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `enviar_mensaje`
+-- AUTO_INCREMENT de la tabla `mensajes`
 --
-ALTER TABLE `enviar_mensaje`
-  MODIFY `COD_ENV` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `mensajes`
+  MODIFY `ID_MEN` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `mensaje`
+-- AUTO_INCREMENT de la tabla `publicacion`
 --
-ALTER TABLE `mensaje`
-  MODIFY `COD_MEN` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `publicacion`
+  MODIFY `ID_PUB` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `registro`
+-- Restricciones para tablas volcadas
 --
-ALTER TABLE `registro`
-  MODIFY `COD_REG` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- Filtros para la tabla `curso`
 --
-ALTER TABLE `usuario`
-  MODIFY `COD_USU` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `curso`
+  ADD CONSTRAINT `curso_ibfk_1` FOREIGN KEY (`CED_USU_CREA`) REFERENCES `usuario` (`CED_USU`);
+
+--
+-- Filtros para la tabla `detalle_curso`
+--
+ALTER TABLE `detalle_curso`
+  ADD CONSTRAINT `detalle_curso_ibfk_1` FOREIGN KEY (`CED_USU_PER`) REFERENCES `usuario` (`CED_USU`),
+  ADD CONSTRAINT `detalle_curso_ibfk_2` FOREIGN KEY (`ID_CUR_PER`) REFERENCES `curso` (`ID_CUR`);
+
+--
+-- Filtros para la tabla `detalle_publicacion`
+--
+ALTER TABLE `detalle_publicacion`
+  ADD CONSTRAINT `detalle_publicacion_ibfk_1` FOREIGN KEY (`CED_USU_PUB`) REFERENCES `usuario` (`CED_USU`),
+  ADD CONSTRAINT `detalle_publicacion_ibfk_2` FOREIGN KEY (`ID_PUB_PER`) REFERENCES `publicacion` (`ID_PUB`);
+
+--
+-- Filtros para la tabla `publicacion`
+--
+ALTER TABLE `publicacion`
+  ADD CONSTRAINT `publicacion_ibfk_1` FOREIGN KEY (`CED_USU_PUB`) REFERENCES `usuario` (`CED_USU`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
