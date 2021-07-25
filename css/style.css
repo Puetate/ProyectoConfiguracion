@@ -1,0 +1,184 @@
+body{
+  font-family: 'Titillium Web', sans-serif;
+}
+h1{
+  font-size: 55px; font-weight: 600; line-height: 70px; color: #90B3EF;
+}
+h2{
+  font-size: 44px; margin-bottom: 30px;
+}
+.footer-widht{
+  position: absolute;
+  background-color: black
+}
+
+section{
+  padding: 120px 0;
+}
+.topmargin-lg{
+  margin-top: 60px;
+}
+.topmargin-sm{
+  margin-top: 30px;
+}
+.topmargin-xs{
+  margin-top: 15px;
+}
+.navbar{
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba( 0, 0, 0.5);
+  min-height: 100px;
+}
+#hero p {
+  color: white;
+}
+.nav-link{
+  color: black;
+}
+.nav-link:hover{
+  color: #265ABC;
+}
+.logo-brand{
+  min-width: 80px;
+  max-width: 80px;
+}
+#hero{
+  background: url('../assets/images/hero.jpg') no-repeat;
+  background-color: rgb(100,100,100);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  padding-top: 90px;
+  min-height: 500px;
+  color: white;
+}
+
+.btn{
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 160px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.btn-light{
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+
+}
+.content-center{
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+/************************************PRUEBAS************************************/
+.navbar-toggler:focus {
+  text-decoration: none;
+  box-shadow: none;
+ 
+}
+.navbar-toggler:active{
+ background-size: 85%;
+}
+.navbar-toggler{
+  background: url('../assets/images/menu.png')no-repeat ;
+  background-position:center;
+  background-size: 70%;
+}
+
+@media (min-width: 992px) {
+  /*.navbar-expand-lg {flex-wrap: nowrap;justify-content: flex-start;}
+  .navbar-expand-lg .navbar-nav { flex-direction: row; }
+  .navbar-expand-lg .navbar-nav .dropdown-menu { position: absolute; }
+  .navbar-expand-lg .navbar-nav .nav-link { padding-right: 0.5rem; padding-left: 0.5rem; }
+  .navbar-expand-lg .navbar-nav-scroll { overflow: visible; }
+  .navbar-expand-lg .navbar-collapse { flex-basis: auto; display: flex !important; }*/
+}
+/************************************PRUEBAS************************************/
+/* -------------------------------LOGIN--------------------------------------- */
+.login-box{
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  
+  background-color: whitesmoke;
+
+}
+.login-icon{
+  width: 150px;
+  height: 150px;
+  display:block;
+  margin:auto;
+  border-radius: 50%;
+  border: 1px solid black;
+
+}
+.title-ingresar{
+  font-size: 30px;
+  text-align: center;
+
+}
+.lbl-username{
+
+}
+.lbl-userpassword{
+  
+}
+.form-login > .inpt-log{
+  width: 100%;
+  border-width: 1px;
+  border-color: dodgerblue;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  color: black;
+}
+
+.inpt-login-button{
+  color:white;
+  font-size: 14px;
+  padding: 15px 26px;
+  min-width: 100px;
+  border-radius: 2px;
+  display: inline-block;
+  /* font-size: 20px; */
+  border-radius: 5px;
+  background-color: #0d6efd;
+  display:block;
+  margin:auto;
+  margin-bottom: 10px;
+}
+.no-account{
+  font-size: 16px;
+  margin: 38px;
+  text-decoration: none;
+}
+form label{
+  color: #000;
+  font-size: 20px;
+}
+
+.login-box input:active, .login-box input:focus{
+  
+  outline-color: #0d6efd;
+  
+}
+
+
+/* -------------------------------LOGIN--------------------------------------- */
+
+
+
+/* -------------------------------FORO--------------------------------------- */
+
+.nav-foro{
+  color: rgb(107, 10, 10);
+  font-size: 23px;
+  line-height: 3;
+}
+/* -------------------------------CURSOS--------------------------------------- */
